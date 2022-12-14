@@ -25,7 +25,7 @@ import Spinner from'../composable/Spinner'
 export default {
 
   components: {PostsList, Spinner },
-  setup(){
+  setup(){ 
     
     let{posts, error, load}=getPosts()
 

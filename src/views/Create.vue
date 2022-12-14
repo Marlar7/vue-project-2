@@ -1,5 +1,5 @@
 <template>
-   <form>
+   <form @submit.prevent="addPost">
     <lable>Title</lable>
     <input type="text" require v-model="title">
     <lable> Body</lable>
@@ -16,9 +16,11 @@
    </form>
 </template>
 <script>
+import { useRouter} from 'vue-router'
 import {ref} from "vue"
 export default {
     setup(){
+        let router=useRouter();
         let title= ref("");
         let body=ref("");
         let tag=ref("");
@@ -29,8 +31,23 @@ export default {
             }
             tag.value=""
         }
-
-        return{title,body,tag,handleKeydown,tags}
+        let addPost=async ()=>{
+            await fetch(" http://localhost:3000/posts", {
+                method: "POST",
+                headers:{
+                    "Content-type":"application/json"
+                },
+                body:JSON.stringify(
+                    {
+                        title:title.value,
+                        body:body.value,
+                        tags:tags.value
+                    }
+                )
+            })
+            router.push("/");
+        }
+        return{title,body,tag,handleKeydown,tags , addPost}
     }
 }
 </script>

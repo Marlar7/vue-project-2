@@ -1,22 +1,76 @@
 {
-    "posts":[
-        {
-            "title": "post title 1",
-            "id":1,
-            "body":"Lorem ipsum"
-        },
-        {
-            "title": "post title 2",
-            "id":2,
-            "body":"Lorem ipsum"
-        },
-        {
-            "title": "post title 3",
-            "id":3,
-            "body":"Lorem ipsum"
-        }
-
-    ]
-
-
+  "posts": [
+    {
+      "title": "post title 1",
+      "id": 1,
+      "body": "Lorem ipsum"
+    },
+    {
+      "title": "post title 2",
+      "id": 2,
+      "body": "Lorem ipsum"
+    },
+    {
+      "title": "post title 3",
+      "id": 3,
+      "body": "Lorem ipsum"
+    },
+    {
+      "title": "",
+      "body": "",
+      "tags": [],
+      "id": 4
+    },
+    {
+      "title": "ews",
+      "body": "",
+      "tags": [],
+      "id": 5
+    },
+    {
+      "title": "ews",
+      "body": "ere",
+      "tags": [
+        "sfs"
+      ],
+      "id": 6
+    },
+    {
+      "title": "ews",
+      "body": "ere",
+      "tags": [
+        "sfs"
+      ],
+      "id": 7
+    },
+    {
+      "title": "ews",
+      "body": "ere",
+      "tags": [
+        "sfs"
+      ],
+      "id": 8
+    },
+    {
+      "title": "eer",
+      "body": "fds",
+      "tags": [],
+      "id": 9
+    },
+    {
+      "title": "html ",
+      "body": "html",
+      "tags": [],
+      "id": 10
+    },
+    {
+      "title": "php ",
+      "body": "php",
+      "tags": [
+        "php",
+        "css"
+      ],
+      "id": 11
+    }
+  ]
 }
