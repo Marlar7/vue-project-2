@@ -3,8 +3,14 @@
     <div v-if="error">
       {{error}}
     </div>
-    <div v-if="posts.length>0">
-      <PostsList :posts="posts"></PostsList>
+    <div v-if="posts.length>0" class="layout">
+      <div>
+         <PostsList :posts="posts"> </PostsList>
+      </div>
+     <div>
+       <TagCloud :posts="posts"></TagCloud>
+     </div>
+     
      
     </div>
     <div v-else>
@@ -22,9 +28,11 @@ import PostsList from '../components/PostsList'
 import getPosts from "../composable/getPosts"
 
 import Spinner from'../composable/Spinner'
+
+import TagCloud from '../components/TagCloud'
 export default {
 
-  components: {PostsList, Spinner },
+  components: {PostsList, Spinner ,TagCloud},
   setup(){ 
     
     let{posts, error, load}=getPosts()
@@ -42,7 +50,7 @@ export default {
   }
   .layout{
     display: grid;
-    grid-template-columns: 3fr  1fr  ;
+    grid-template-columns: 3fr  1fr;
     gap:20px;
     }
 </style>
