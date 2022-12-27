@@ -12,8 +12,8 @@ let getPosts=()=>{
           if (response.status===404){
             throw new Error("not found url");
           }
-          let datas=await response.json()
-          posts.value=datas
+          let datas=await response.json();
+          posts.value=datas;
     }catch(err){
           error.value=err.message;
     }

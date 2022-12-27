@@ -25,11 +25,12 @@
 
 import PostsList from '../components/PostsList'
 
-import getPosts from "../composable/getPosts"
+import getPosts from "../composables/getPosts"
 
-import Spinner from'../composable/Spinner'
+import Spinner from'../composables/Spinner'
 
 import TagCloud from '../components/TagCloud'
+
 export default {
 
   components: {PostsList, Spinner ,TagCloud},
@@ -52,6 +53,7 @@ export default {
     display: grid;
     grid-template-columns: 3fr  1fr;
     gap:20px;
+
     }
 </style>
 

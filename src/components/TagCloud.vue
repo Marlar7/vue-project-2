@@ -1,7 +1,7 @@
 <template>
 <div class="tag-cloud">
     <div>
-         <h1> TagCloud</h1>
+         <h1> TagCloud </h1>
         <div v-for="tag in uniqueTags" :key="tag">
          <router-link :to="{name:'Tag' , params:{tag}}">{{tag}}</router-link>
     </div>
@@ -12,6 +12,7 @@
        
 </template>
 <script>
+import { ref } from 'vue'
 export default {
     props: ["posts"],
     setup(props){
@@ -25,7 +26,7 @@ export default {
 
             return array.indexOf(tag)===index
         })
-        return{uniqueTags}
+        return{uniqueTags};
     }
 }
 </script>

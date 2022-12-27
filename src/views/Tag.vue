@@ -1,19 +1,24 @@
-<template>
+<template>   
     <div class="tag">
-        <div v-if="post.length" class="layout">
-        <div>
-            <PostList :posts="filteredPosts"></PostList>
+        
+      <div > 
+        
+        <div v-if='error'>{{error}}</div>
+        <div v-if='posts.length' class="layout">     
+      <div> 
+            <PostsList :posts="filteredPosts"></PostsList>
         </div>
         <div>
             <TagCloud :posts="posts"></TagCloud>
-        </div>
-    </div>
-    </div>
+        </div> 
+ </div>  
+ </div> 
+ </div>
 </template>
-<script>
-import TagCloud from '../components/TagCloud';
-import PostsList from '../components/PostsList';
-import getPosts from '../composable/getPosts ';
+ <script>
+import TagCloud from '../components/TagCloud'
+import PostsList from '../components/PostsList'
+import getPosts from '../composables/getPosts'
 import {computed}from 'vue';
 export default {
     components :{
@@ -21,7 +26,9 @@ export default {
     },
     props: ["tag"],
     setup(props){
-        let{posts, error,load}=getPosts();
+      
+    
+        let{posts, error,load}= getPosts()
         load();
         let filteredPosts=computed(()=>{
             return posts.value.filter((post)=>{
@@ -29,7 +36,7 @@ export default {
 
             })
         })
-        return{posts,error,filteredPosts}
+        return{posts,error,filteredPosts};
     }
 }
 </script>

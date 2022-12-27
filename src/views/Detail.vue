@@ -14,8 +14,8 @@
     </div>
 </template>
 <script>
-import getPost from "../composable/getPost"
-import Spinner from "../composable/Spinner"
+import getPost from "../composables/getPost"
+import Spinner from "../composables/Spinner"
 import {useRoute} from "vue-router"
 export default {
     components:{Spinner},
