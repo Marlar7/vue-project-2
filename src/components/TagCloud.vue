@@ -12,7 +12,7 @@
        
 </template>
 <script>
-import { ref } from 'vue'
+import { ref } from 'vue';
 export default {
     props: ["posts"],
     setup(props){

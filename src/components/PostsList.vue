@@ -15,7 +15,7 @@ export default{
     components:{SinglePost},
     props:["posts"],
     setup(props){
-        console.log(props.posts)
+        console.log(props.post)
     }
 }
 </script>

@@ -16,10 +16,12 @@
  </div>
 </template>
  <script>
+
 import TagCloud from '../components/TagCloud'
 import PostsList from '../components/PostsList'
 import getPosts from '../composables/getPosts'
 import {computed}from 'vue';
+
 export default {
     components :{
         TagCloud, PostsList

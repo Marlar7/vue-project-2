@@ -1,7 +1,10 @@
-import { ref } from 'vue';
+
+
+import { ref }from 'vue';
+import {db}from "../firebase/config"
 let getPosts=()=>{
-    let posts=ref([]);
-    let error=ref("");
+    let posts= ref ([]);
+    let error= ref ("");
     let load =async() => {
     try {
       // await new Promise((resolve,reject)=>{
