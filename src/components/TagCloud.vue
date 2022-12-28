@@ -12,7 +12,7 @@
        
 </template>
 <script>
-import { ref } from 'vue';
+import { ref } from 'vue'
 export default {
     props: ["posts"],
     setup(props){
@@ -22,7 +22,7 @@ export default {
                 tags.value.push(tag);
             })
         })
-        let uiqueTags=tags.value.filter((tag,index,array)=>{
+        let uniqueTags=tags.value.filter((tag,index,array)=>{
 
             return array.indexOf(tag)===index
         })
