@@ -18,7 +18,7 @@
 <script>
 import { useRouter} from 'vue-router'
 import {ref} from "vue"
-import {db} from "../firebase/config"
+import {db,timestamp} from "../firebase/config"
 export default {
     setup(){
         let router=useRouter();
@@ -36,7 +36,8 @@ export default {
           let newPost= {
                         title:title.value,
                         body:body.value,
-                        tags:tags.value
+                        tags:tags.value,
+                        created_at:timestamp()
                     }
                     let res= await db.collection("posts").add(newPost)
            
